@@ -1,0 +1,22 @@
+# 构建输出
+bin/
+obj/
+publish/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 备份与临时文件
+*.bak
+*.tmp
+*~
+*.log
+test1.txt
+test2.txt
+
+# 本机体检产物
+电脑体检报告.html
