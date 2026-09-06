@@ -1,0 +1,49 @@
+﻿<Window
+    x:Class="TiJianWinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="一键电脑体检工具">
+    <Grid Background="#F2F7F6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#FCFEFD" Padding="24,14" BorderBrush="#E3ECEA" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Spacing="4">
+                    <TextBlock x:Name="TitleText" Text="一键电脑体检" FontSize="20" FontWeight="SemiBold" Foreground="#134E4A"/>
+                    <TextBlock x:Name="DeviceText" Text="" FontSize="12" Foreground="#5B6B68"/>
+                    <TextBlock x:Name="TimeText" Text="" FontSize="12" Foreground="#82918E"/>
+                </StackPanel>
+                <Border Grid.Column="1" x:Name="BadgeBorder" Background="#E6F4F2" CornerRadius="14" Padding="12,6,12,6" VerticalAlignment="Center" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Ellipse x:Name="BadgeDot" Width="8" Height="8" Fill="#0F766E" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="BadgeText" Text="" FontSize="12" FontWeight="SemiBold" Foreground="#0F766E"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Background="#FCFEFD" Padding="24,10,24,10" BorderBrush="#E3ECEA" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="ProgressBar" Height="6" VerticalAlignment="Center" Maximum="100" Value="0" Foreground="#0F766E" Background="#E3ECEA"/>
+                <TextBlock x:Name="ProgressPct" Grid.Column="1" Text="" FontSize="12" FontWeight="SemiBold" Foreground="#0F766E" VerticalAlignment="Center" Margin="14,0,0,0" MinWidth="40" TextAlignment="Right"/>
+            </Grid>
+        </Border>
+        <Border Grid.Row="2" Background="#FCFEFD" Padding="24,2,24,6" BorderBrush="#E3ECEA" BorderThickness="0,0,0,1">
+            <TextBlock x:Name="StatusText" Text="正在初始化…" FontSize="12" Foreground="#5B6B68" Height="18" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
+        </Border>
+        <ScrollViewer Grid.Row="3">
+            <StackPanel x:Name="RootPanel" Padding="20,16" Spacing="16"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
